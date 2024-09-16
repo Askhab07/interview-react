@@ -6,7 +6,7 @@ justify-content: center;
   margin-top: 110px;
   margin-bottom: 25px;
   width: 314px;
-  height: 445px;
+  height: 465px;
   background-color: #fff;
   border-radius: 26px;
 }
@@ -40,7 +40,7 @@ justify-content: center;
 
 .quiz-text {
   width: 265px;
-  height: 320px;
+  height: 340px;
   overflow-y: scroll;
   margin-bottom: 30px;
   font-family: 'Gilroy-Regular';

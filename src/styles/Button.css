@@ -1,4 +1,6 @@
 button {
+    position: absolute;
+    bottom: 0;
     width: 314px;
     height: 60px;
     background-color: rgb(91, 83, 255);
@@ -7,4 +9,5 @@ button {
     color: #fff;
     border: none;
     border-radius: 26px;
+    cursor: pointer;
 }

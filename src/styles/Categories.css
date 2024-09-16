@@ -1,17 +1,17 @@
-.home {
+.categories {
     position: relative;
     margin: 59px auto;
     width: 314px;
     height: 720px;
 }
 
-.h2 {
+.categories .h2 {
     font-family: 'Gilroy-SemiBold';
     font-size: 20px;
     margin-bottom: 15px;
 }
 
-p {
+.categories p {
     font-family: 'Gilroy-Regular';
     color: rgb(143, 155, 186);
 }

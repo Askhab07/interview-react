@@ -1,22 +1,22 @@
 import React from 'react';
-import '../styles/Home.css';
-import Quiz from '../components/Quiz/Quiz';
+import CreateQuiz from '../components/CreateQuiz/CreateQuiz';
 import Button from '../components/Button/Button';
+import '../styles/Create.css';
 
-const Home = ({setPages}) => {
+const Create = ({setPages}) => {
 
     const handleClick = () => {
         setPages(1)
     }
 
     return (
-        <main className='home'>
+        <div className='create'>
             <h2 className='h2'>Preparing for an interview</h2>
             <p>Fresh virtual card will be on your way!</p>
-            <Quiz />
-            <Button onClick={handleClick} text='Back to go' />
-        </main>
+            <CreateQuiz />
+            <Button onClick={handleClick} text='Create'/>
+        </div>
     );
 };
 
-export default Home;
+export default Create;

@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Gilroy-Black';
+    src: local('Gilroy Black'),
+    local('Gilroy-Black'),
+    url('../fonts/Gilroy-Black.woff');
+  }
+  
+  @font-face {
+    font-family: 'Gilroy-Heavy';
+    src: local('Gilroy Heavy'),
+    local('Gilroy-Heavy'),
+    url('../fonts/Gilroy-Heavy.woff');
+  }
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: local('Gilroy Bold'),
+    local('Gilroy-Bold'),
+    url('../fonts/Gilroy-Bold.woff');
+  }
+  
+@font-face {
+    font-family: 'Gilroy-ExtraBold';
+    src: local('Gilroy ExtraBold'),
+    local('Gilroy-ExtraBold'),
+    url('../fonts/Gilroy-ExtraBold.woff');
+  }
+
+  @font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: local('Gilroy SemiBold'),
+    local('Gilroy-SemiBold'),
+    url('../fonts/Gilroy-SemiBold.woff');
+  }
+
+  @font-face {
+    font-family: 'Gilroy-Medium';
+    src: local('Gilroy Medium'),
+    local('Gilroy-Medium'),
+    url('../fonts/Gilroy-Medium.woff');
+  }
+  
+  @font-face {
+    font-family: 'Gilroy-Regular';
+    src: local('Gilroy Regular'),
+    local('Gilroy-Regular'),
+    url('../fonts/Gilroy-Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Gilroy-Light';
+    src: local('Gilroy Light'),
+    local('Gilroy-Light'),
+    url('../fonts/Gilroy-Light.woff');
+  }
+  
+  @font-face {
+    font-family: 'Gilroy-UltraLight';
+    src: local('Gilroy UltraLight'),
+    local('Gilroy-UltraLight'),
+    url('../fonts/Gilroy-UltraLight.woff');
+  }
+
+  @font-face {
+    font-family: 'Gilroy-Thin';
+    src: local('Gilroy Thin'),
+    local('Gilroy-Thin'),
+    url('../fonts/Gilroy-Thin.woff');
+  }

@@ -1,0 +1,10 @@
+button {
+    width: 314px;
+    height: 60px;
+    background-color: rgb(91, 83, 255);
+    font-family: 'Gilroy-Bold';
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 26px;
+}

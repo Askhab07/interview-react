@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/interview-react/static/css/main.f855e6bc.css",
-    "main.js": "/interview-react/static/js/main.507351a0.js",
-    "static/js/453.b526487a.chunk.js": "/interview-react/static/js/453.b526487a.chunk.js",
-    "static/media/logo.svg": "/interview-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/interview-react/static/css/main.5a4861b1.css",
+    "main.js": "/interview-react/static/js/main.61e5b997.js",
+    "static/media/Gilroy-Medium.woff": "/interview-react/static/media/Gilroy-Medium.2bc7f5d7ea77ee1bddb3.woff",
+    "static/media/Gilroy-Bold.woff": "/interview-react/static/media/Gilroy-Bold.5fb38b9fa452b5814397.woff",
+    "static/media/Gilroy-Black.woff": "/interview-react/static/media/Gilroy-Black.1f5dc7482c1aec4cc827.woff",
+    "static/media/Gilroy-SemiBold.woff": "/interview-react/static/media/Gilroy-SemiBold.e38937dbf8202c144802.woff",
+    "static/media/Gilroy-UltraLight.woff": "/interview-react/static/media/Gilroy-UltraLight.d23a0edf71fe026ab53f.woff",
+    "static/media/Gilroy-Light.woff": "/interview-react/static/media/Gilroy-Light.9df2f5dbbb9c90a6ede7.woff",
+    "static/media/Gilroy-Heavy.woff": "/interview-react/static/media/Gilroy-Heavy.d7504387e1cad66d83bb.woff",
+    "static/media/Gilroy-Thin.woff": "/interview-react/static/media/Gilroy-Thin.6e2e7d472d0beb6b3cef.woff",
+    "static/media/Gilroy-ExtraBold.woff": "/interview-react/static/media/Gilroy-ExtraBold.cb761043a2e505ff53c1.woff",
+    "static/media/Gilroy-Regular.woff": "/interview-react/static/media/Gilroy-Regular.31d54a4b841c0e438f13.woff",
     "index.html": "/interview-react/index.html",
-    "main.f855e6bc.css.map": "/interview-react/static/css/main.f855e6bc.css.map",
-    "main.507351a0.js.map": "/interview-react/static/js/main.507351a0.js.map",
-    "453.b526487a.chunk.js.map": "/interview-react/static/js/453.b526487a.chunk.js.map"
+    "main.5a4861b1.css.map": "/interview-react/static/css/main.5a4861b1.css.map",
+    "main.61e5b997.js.map": "/interview-react/static/js/main.61e5b997.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.507351a0.js"
+    "static/css/main.5a4861b1.css",
+    "static/js/main.61e5b997.js"
   ]
 }

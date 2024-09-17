@@ -8,11 +8,12 @@ import Create from './UI/Create';
 function App() {
   const [pages, setPages] = useState(1);
   const [activeId, setActiveId] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   return (
     <div className="app">
-      {pages === 1 && <Categories setPages={setPages} />}
-      {activeId === null && pages === 4 && <CategoriesList setActiveId={setActiveId} setPages={setPages} />}
+      {pages === 1 && <Categories setSelectedCategory={setSelectedCategory} setPages={setPages} />}
+      {activeId === null && pages === 4 && <CategoriesList selectedCategory={selectedCategory} setActiveId={setActiveId} setPages={setPages} />}
       {pages === 3 && <Create setPages={setPages} />}
       {activeId !== null && <Home activeId={activeId} setActiveId={setActiveId} setPages={setPages}/>}
     </div>

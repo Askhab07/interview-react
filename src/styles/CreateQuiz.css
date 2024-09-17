@@ -27,7 +27,8 @@
 }
 
 .create-quiz input,
-textarea {
+textarea,
+select {
   width: 260px;
   height: 60px;
   font-size: 18px;
@@ -38,6 +39,11 @@ textarea {
   border-radius: 20px;
   border: none;
   outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .create-quiz textarea {

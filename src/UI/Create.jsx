@@ -36,7 +36,9 @@ const Create = ({ setPages }) => {
       question: questionInput,
       answer: answerInput,
     });
-    console.log(quiz);
+    setCategoryInput('');
+    setQuestionInput('');
+    setAnswerInput('');
   };
 
   return (

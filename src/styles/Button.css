@@ -1,6 +1,4 @@
 button {
-    position: absolute;
-    bottom: 0;
     width: 314px;
     height: 60px;
     background-color: rgb(91, 83, 255);
@@ -10,4 +8,21 @@ button {
     border: none;
     border-radius: 26px;
     cursor: pointer;
+}
+
+.add {
+    width: 230px;
+    height: 60px;
+}
+
+.add-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+.add-arrow img {
+    transform: scale(-1, 1);
 }

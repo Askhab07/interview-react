@@ -5,6 +5,11 @@
     height: 720px;
 }
 
+.create-footer {
+    display: flex;
+justify-content: space-between;
+}
+
 .h2 {
     font-family: 'Gilroy-SemiBold';
     font-size: 20px;

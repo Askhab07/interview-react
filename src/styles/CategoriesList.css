@@ -1,21 +1,20 @@
-.categories {
-    position: relative;
+.categories-list {
     margin: 59px auto;
     width: 314px;
     height: 720px;
 }
 
-.categories .h2 {
+.h2 {
     font-family: 'Gilroy-SemiBold';
     font-size: 20px;
     margin-bottom: 15px;
 }
 
-.categories p {
+p {
     font-family: 'Gilroy-Regular';
     color: rgb(143, 155, 186);
 }
 
-.category-list {
+.categories-list-list {
     height: 570px;
 }

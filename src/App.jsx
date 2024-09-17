@@ -7,13 +7,14 @@ import Create from './UI/Create';
 
 function App() {
   const [pages, setPages] = useState(1);
+  const [activeId, setActiveId] = useState(null);
 
   return (
     <div className="app">
       {pages === 1 && <Categories setPages={setPages} />}
-      {pages === 4 && <CategoriesList setPages={setPages} />}
-      {pages === 2 && <Home setPages={setPages} />}
+      {activeId === null && pages === 4 && <CategoriesList setActiveId={setActiveId} setPages={setPages} />}
       {pages === 3 && <Create setPages={setPages} />}
+      {activeId !== null && <Home activeId={activeId} setActiveId={setActiveId} setPages={setPages}/>}
     </div>
   );
 }

@@ -47,4 +47,5 @@ textarea {
   margin: 20px 0;
   padding: 20px;
   background-color: #F4F7FE;
+  resize: none;
 }

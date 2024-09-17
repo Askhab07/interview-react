@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../components/Button/Button';
 import '../styles/Categories.css';
 import Category from '../components/Category/Category';
-import { quiz } from '../db/database';
+import axios from 'axios';
 
 
 const Categories = ({ setPages, setSelectedCategory }) => {
+
+  const [quizData, setQuizData] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/api/quiz')
+      .then(response => {
+        setQuizData(response.data.data); // Сохраняем данные из базы в состояние
+      })
+      .catch(error => {
+        console.error('Error fetching quiz data:', error);
+      });
+  }, [])
   
-  const uniqueCategories = [...new Set(quiz.map(item => item.category))];
+  const uniqueCategories = [...new Set(quizData.map(item => item.category))];
 
   const handleQuizList = (category) => {
     setSelectedCategory(category)

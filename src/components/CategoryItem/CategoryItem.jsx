@@ -3,9 +3,10 @@ import '../../styles/CategoryItem.css';
 import deleteIcon from '../../assets/delete.svg';
 import axios from 'axios';
 
-const CategoryItem = ({text, onClick, setQuizData}) => {
+const CategoryItem = ({text, onClick, setQuizData, id}) => {
 
-    const handleDelete = (id) => {
+    const handleDelete = (e) => {
+      e.stopPropagation()
         axios.delete(`http://localhost:3001/api/quiz/${id}`)
           .then(response => {
             console.log(response.data.message);

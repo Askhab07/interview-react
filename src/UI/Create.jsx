@@ -28,7 +28,7 @@ const Create = ({ setPages }) => {
       })
       .then(response => {
         console.log(response.data.message);
-        setPages(1);
+        setPages(4);
       })
       .catch(error => {
         console.error('Error adding question:', error);

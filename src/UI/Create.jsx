@@ -3,42 +3,36 @@ import CreateQuiz from '../components/CreateQuiz/CreateQuiz';
 import Button from '../components/Button/Button';
 import '../styles/Create.css';
 import arrow from '../assets/arrowwhite.svg';
-import { quiz } from '../db/database';
+import axios from 'axios';
 
 const Create = ({ setPages }) => {
-  const [categoryInput, setCategoryInput] = useState('');
-  const [questionInput, setQuestionInput] = useState('');
-  const [answerInput, setAnswerInput] = useState('');
+  const [newCategory, setNewCategory] = useState('');
+  const [newQuestion, setNewQuestion] = useState('');
+  const [newAnswer, setNewAnswer] = useState('');
 
   const handleClick = () => {
     setPages(1);
   };
 
-  const onChangeInput1 = (e) => {
-    e.preventDefault();
-    setCategoryInput(e.target.value);
-  };
-
-  const onChangeInput2 = (e) => {
-    e.preventDefault();
-    setQuestionInput(e.target.value);
-  };
-
-  const onChangeInput3 = (e) => {
-    e.preventDefault();
-    setAnswerInput(e.target.value);
-  };
-
   const addQuiz = () => {
-    quiz.push({
-      id: quiz.length + 1,
-      category: categoryInput,
-      question: questionInput,
-      answer: answerInput,
-    });
-    setCategoryInput('');
-    setQuestionInput('');
-    setAnswerInput('');
+
+    if (!newCategory || !newQuestion || !newAnswer) {
+      alert('All fields are required');
+      return;
+    }
+
+    axios.post('http://localhost:3001/api/quiz', {
+        category: newCategory,
+        question: newQuestion,
+        answer: newAnswer
+      })
+      .then(response => {
+        console.log(response.data.message);
+        setPages(1);
+      })
+      .catch(error => {
+        console.error('Error adding question:', error);
+      });
   };
 
   return (
@@ -46,12 +40,12 @@ const Create = ({ setPages }) => {
       <h2 className="h2">Preparing for an interview</h2>
       <p>Fresh virtual card will be on your way!</p>
       <CreateQuiz
-        categoryInput={categoryInput}
-        questionInput={questionInput}
-        answerInput={answerInput}
-        onChangeInput1={onChangeInput1}
-        onChangeInput2={onChangeInput2}
-        onChangeInput3={onChangeInput3}
+        category={newCategory}
+        question={newQuestion}
+        answer={newAnswer}
+        setNewCategory={setNewCategory}
+        setNewQuestion={setNewQuestion}
+        setNewAnswer={setNewAnswer}
       />
       <div className="create-footer">
         <Button className="add-arrow" icon={arrow} onClick={handleClick} />

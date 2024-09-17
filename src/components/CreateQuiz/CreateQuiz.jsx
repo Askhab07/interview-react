@@ -1,15 +1,27 @@
 import React from 'react';
 import '../../styles/CreateQuiz.css';
 
-const CreateQuiz = ({categoryInput,questionInput,answerInput, onChangeInput1,
-  onChangeInput2,
-  onChangeInput3}) => {
-
+const CreateQuiz = ({
+  category,
+  question,
+  answer,
+  setNewCategory,
+  setNewQuestion,
+  setNewAnswer,
+}) => {
   return (
     <div className="create-quiz">
       <div className="create-quiz-text">
-        <select name="" id="" value={categoryInput} onChange={onChangeInput1} required>
-          <option value='' selected disabled>Категория</option>
+        <select
+          name=""
+          id=""
+          value={category}
+          onChange={(e) => setNewCategory(e.target.value)}
+          required
+        >
+          <option value="" selected disabled>
+            Категория
+          </option>
           <option>HTML</option>
           <option>CSS</option>
           <option>JavaScript</option>
@@ -17,12 +29,17 @@ const CreateQuiz = ({categoryInput,questionInput,answerInput, onChangeInput1,
           <option>TypeScript</option>
         </select>
         <label htmlFor="">
-            Вопрос
-          <input type="text" value={questionInput} onChange={onChangeInput2} required/>
+          Вопрос
+          <input
+            type="text"
+            value={question}
+            onChange={(e) => setNewQuestion(e.target.value)}
+            required
+          />
         </label>
         <label htmlFor="">
-            Ответ
-        <textarea value={answerInput} onChange={onChangeInput3} required/>
+          Ответ
+          <textarea value={answer} onChange={(e) => setNewAnswer(e.target.value)} required />
         </label>
       </div>
     </div>

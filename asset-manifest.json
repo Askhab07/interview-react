@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/interview-react/static/css/main.f3eb3e89.css",
-    "main.js": "/interview-react/static/js/main.04327ccc.js",
+    "main.css": "/interview-react/static/css/main.d39d06bb.css",
+    "main.js": "/interview-react/static/js/main.54c44094.js",
     "static/media/Gilroy-Medium.woff": "/interview-react/static/media/Gilroy-Medium.2bc7f5d7ea77ee1bddb3.woff",
     "static/media/Gilroy-Bold.woff": "/interview-react/static/media/Gilroy-Bold.5fb38b9fa452b5814397.woff",
     "static/media/Gilroy-Black.woff": "/interview-react/static/media/Gilroy-Black.1f5dc7482c1aec4cc827.woff",
@@ -16,11 +16,11 @@
     "index.html": "/interview-react/index.html",
     "static/media/arrowwhite.svg": "/interview-react/static/media/arrowwhite.09cd53802747c1a54741743f81c675e3.svg",
     "static/media/arrow.svg": "/interview-react/static/media/arrow.23a5345f2cb0fd7fa21326ba38855abe.svg",
-    "main.f3eb3e89.css.map": "/interview-react/static/css/main.f3eb3e89.css.map",
-    "main.04327ccc.js.map": "/interview-react/static/js/main.04327ccc.js.map"
+    "main.d39d06bb.css.map": "/interview-react/static/css/main.d39d06bb.css.map",
+    "main.54c44094.js.map": "/interview-react/static/js/main.54c44094.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3eb3e89.css",
-    "static/js/main.04327ccc.js"
+    "static/css/main.d39d06bb.css",
+    "static/js/main.54c44094.js"
   ]
 }

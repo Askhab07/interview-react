@@ -9,6 +9,7 @@ const Create = ({ setPages }) => {
   const [newCategory, setNewCategory] = useState('');
   const [newQuestion, setNewQuestion] = useState('');
   const [newAnswer, setNewAnswer] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = () => {
     setPages(1);
@@ -21,18 +22,28 @@ const Create = ({ setPages }) => {
       return;
     }
 
-    axios.post('http://localhost:3001/api/quiz', {
+    setIsLoading(true);
+
+    axios.post('https://script.google.com/macros/s/AKfycbzChIsH0FsUFaLYVL9ONfT2rAlUH2B64F30UwAc6nYBmLdeb6GtvX1wix7CP1kHuf7E/exec', {
+        id: new Date().getTime(),
         category: newCategory,
         question: newQuestion,
         answer: newAnswer
+      }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
       })
       .then(response => {
-        console.log(response.data.message);
+        console.log("Responce:", response.data);
         setPages(4);
       })
       .catch(error => {
         console.error('Error adding question:', error);
-      });
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });;
   };
 
   return (
@@ -51,6 +62,7 @@ const Create = ({ setPages }) => {
         <Button className="add-arrow" icon={arrow} onClick={handleClick} />
         <Button onClick={addQuiz} className="add" text="Create" />
       </div>
+      {isLoading && <div className='loading'>Loading...</div>}
     </div>
   );
 };

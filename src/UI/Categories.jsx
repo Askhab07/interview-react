@@ -8,16 +8,27 @@ import axios from 'axios';
 const Categories = ({ setPages, setSelectedCategory }) => {
 
   const [quizData, setQuizData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/quiz')
+
+    setIsLoading(true);
+
+    axios.get('https://script.google.com/macros/s/AKfycbzChIsH0FsUFaLYVL9ONfT2rAlUH2B64F30UwAc6nYBmLdeb6GtvX1wix7CP1kHuf7E/exec')
       .then(response => {
-        setQuizData(response.data.data); // Сохраняем данные из базы в состояние
+        // Проверьте, что response.data и response.data.data существуют
+        if (response.data && response.data) {
+          setQuizData(response.data); // Сохраняем данные в состоянии
+          setIsLoading(false)
+        } else {
+          console.error('Unexpected response format:', response.data);
+        }
       })
       .catch(error => {
         console.error('Error fetching quiz data:', error);
+        setIsLoading(false)
       });
-  }, [])
+  }, []);
   
   const uniqueCategories = [...new Set(quizData.map(item => item.category))];
 
@@ -35,7 +46,7 @@ const Categories = ({ setPages, setSelectedCategory }) => {
       <h2 className="h2">Preparing for an interview</h2>
       <p>Fresh virtual card will be on your way!</p>
       <div className="category-list">
-        {uniqueCategories.map((q, i) => <Category key={i} onClick={() => handleQuizList(q)} text={q} />)}
+        {isLoading ? <div className='loading'>Загрузка идет братан подожди немного...</div> : (uniqueCategories.map((q, i) => <Category key={i} onClick={() => handleQuizList(q)} text={q} />))}
       </div>
       <Button onClick={handleClick} text="Create quiz" />
     </div>

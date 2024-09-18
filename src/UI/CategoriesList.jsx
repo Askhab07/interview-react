@@ -9,9 +9,9 @@ const CategoriesList = ({setPages, setActiveId, selectedCategory}) => {
   const [quizData, setQuizData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/api/quiz')
+    axios.get('https://script.google.com/macros/s/AKfycbzChIsH0FsUFaLYVL9ONfT2rAlUH2B64F30UwAc6nYBmLdeb6GtvX1wix7CP1kHuf7E/exec')
       .then(response => {
-        setQuizData(response.data.data); // Сохраняем данные из базы в состояние
+        setQuizData(response.data); // Сохраняем данные из базы в состояние
       })
       .catch(error => {
         console.error('Error fetching quiz data:', error);

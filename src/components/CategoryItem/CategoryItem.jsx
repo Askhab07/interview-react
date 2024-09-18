@@ -7,7 +7,7 @@ const CategoryItem = ({text, onClick, setQuizData, id}) => {
 
     const handleDelete = (e) => {
       e.stopPropagation()
-        axios.delete(`http://localhost:3001/api/quiz/${id}`)
+        axios.delete(`https://script.google.com/macros/s/AKfycbzChIsH0FsUFaLYVL9ONfT2rAlUH2B64F30UwAc6nYBmLdeb6GtvX1wix7CP1kHuf7E/exec${id}`)
           .then(response => {
             console.log(response.data.message);
             setQuizData(prevData => prevData.filter(q => q.id !== id)); // Удаляем вопрос из состояния

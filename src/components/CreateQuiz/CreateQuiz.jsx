@@ -19,7 +19,7 @@ const CreateQuiz = ({
           onChange={(e) => setNewCategory(e.target.value)}
           required
         >
-          <option value="" selected disabled>
+          <option value='' selected disabled>
             Категория
           </option>
           <option>HTML</option>

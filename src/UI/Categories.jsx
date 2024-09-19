@@ -7,28 +7,51 @@ import axios from 'axios';
 
 const Categories = ({ setPages, setSelectedCategory }) => {
 
-  const [quizData, setQuizData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [quizData, setQuizData] = useState(() => {
+    // Инициализация данных из localStorage
+    const savedData = localStorage.getItem('quizData');
+    return savedData ? JSON.parse(savedData) : [];
+  });
+  const [isLoading, setIsLoading] = useState(quizData.length === 0);
 
   useEffect(() => {
+    // Функция для получения данных и обновления при необходимости
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://script.google.com/macros/s/AKfycbwG6_UBsY-eojtHXni_35EmRgPy_cNlBfewEMEbOuTCM9XVTft5l9p_2mbRCuxA9QBm/exec');
+        
+        if (response.data) {
+          const serverData = response.data;
 
-    setIsLoading(true);
+          // Проверяем, отличаются ли данные на сервере от данных в localStorage
+          const cachedData = localStorage.getItem('quizData');
+          const parsedCachedData = cachedData ? JSON.parse(cachedData) : [];
 
-    axios.get('https://script.google.com/macros/s/AKfycbzChIsH0FsUFaLYVL9ONfT2rAlUH2B64F30UwAc6nYBmLdeb6GtvX1wix7CP1kHuf7E/exec')
-      .then(response => {
-        // Проверьте, что response.data и response.data.data существуют
-        if (response.data && response.data) {
-          setQuizData(response.data); // Сохраняем данные в состоянии
-          setIsLoading(false)
+          if (JSON.stringify(serverData) !== JSON.stringify(parsedCachedData)) {
+            // Если данные разные, обновляем состояние и localStorage
+            setQuizData(serverData);
+            localStorage.setItem('quizData', JSON.stringify(serverData));
+          }
+
+          setIsLoading(false);
         } else {
           console.error('Unexpected response format:', response.data);
+          setIsLoading(false);
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching quiz data:', error);
-        setIsLoading(false)
-      });
-  }, []);
+        setIsLoading(false);
+      }
+    };
+
+    // Загружаем данные из localStorage для быстрого отображения, затем проверяем свежесть данных на сервере
+    if (quizData.length === 0) {
+      setIsLoading(true); // Если данных нет, включаем загрузку
+    }
+
+    // Независимо от того, есть ли данные в localStorage, отправляем запрос к серверу для проверки
+    fetchData();
+  }, [quizData]);
   
   const uniqueCategories = [...new Set(quizData.map(item => item.category))];
 

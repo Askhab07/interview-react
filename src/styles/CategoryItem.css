@@ -13,3 +13,9 @@
     cursor: pointer;
   }
   
+.modal {
+  width: 200px;
+  height: 200px;
+  color: #fff;
+  background-color: #5d56fe;
+}

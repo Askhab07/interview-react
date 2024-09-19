@@ -16,5 +16,7 @@ p {
 }
 
 .categories-list-list {
-    height: 570px;
+    height: 580px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
 }

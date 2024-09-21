@@ -1,8 +1,7 @@
 .categories {
     position: relative;
-    margin: 59px auto;
+    margin: 20px auto 0;
     width: 314px;
-    height: 720px;
 }
 
 .categories .h2 {
@@ -11,14 +10,23 @@
     margin-bottom: 15px;
 }
 
-.categories p {
-    font-family: 'Gilroy-Regular';
-    color: rgb(143, 155, 186);
+@media screen and (max-height: 844px) {
+    .category-list {
+        margin: 15px 0;
+        width: 314px;
+        min-height: 500px;
+        height: 80vh;
+        overflow: scroll;
+    }
 }
 
-.category-list {
-    height: 570px;
+@media screen and (max-height: 667px) {
+    .category-list {
+        max-height: 75vh;
+    }
 }
+
+
 
 .loading {
     font-size: 20px;

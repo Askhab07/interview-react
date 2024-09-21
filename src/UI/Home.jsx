@@ -51,11 +51,10 @@ const Home = ({setPages, activeId, setActiveId}) => {
     return (
         <main className='home'>
             <h2 className='h2'>Preparing for an interview</h2>
-            <p>Fresh virtual card will be on your way!</p>
             <div className='quiz-list'>
             {activeQuiz && <Quiz category={activeQuiz.category} title={activeQuiz.question} text={activeQuiz.answer} />}
             </div>
-            <Button onClick={handleClick} text='Back to go' />
+            <Button className='btn-postion' onClick={handleClick} text='Back to go' />
         </main>
     );
 };

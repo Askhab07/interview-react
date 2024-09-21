@@ -1,7 +1,6 @@
 .categories-list {
-    margin: 59px auto;
+    margin: 20px auto;
     width: 314px;
-    height: 720px;
 }
 
 .h2 {
@@ -10,13 +9,23 @@
     margin-bottom: 15px;
 }
 
-p {
+.categories-list p {
     font-family: 'Gilroy-Regular';
     color: rgb(143, 155, 186);
 }
 
-.categories-list-list {
-    height: 580px;
-    margin-bottom: 20px;
-    overflow-x: scroll;
+@media screen and (max-height: 844px) {
+    .categories-list-list {
+        margin: 15px 0;
+        width: 314px;
+        min-height: 450px;
+        height: 76vh;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-height: 667px) {
+    .categories-list-list {
+        max-height: 70vh;
+    }
 }

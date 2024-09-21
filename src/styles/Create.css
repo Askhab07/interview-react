@@ -1,22 +1,22 @@
 .create {
-    position: relative;
-    margin: 59px auto;
-    width: 314px;
-    height: 720px;
+  position: relative;
+  margin: 59px auto;
+  width: 314px;
+  height: 720px;
 }
 
 .create-footer {
-    display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .h2 {
-    font-family: 'Gilroy-SemiBold';
-    font-size: 20px;
-    margin-bottom: 15px;
+  font-family: 'Gilroy-SemiBold';
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
-p {
-    font-family: 'Gilroy-Regular';
-    color: rgb(143, 155, 186);
+.create p {
+  font-family: 'Gilroy-Regular';
+  color: rgb(143, 155, 186);
 }

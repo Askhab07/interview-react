@@ -67,7 +67,6 @@ const Categories = ({ setPages, setSelectedCategory }) => {
   return (
     <div className="categories">
       <h2 className="h2">Preparing for an interview</h2>
-      <p>Fresh virtual card will be on your way!</p>
       <div className="category-list">
         {isLoading ? <div className='loading'>Загрузка идет братан подожди немного...</div> : (uniqueCategories.map((q, i) => <Category key={i} onClick={() => handleQuizList(q)} text={q} />))}
       </div>

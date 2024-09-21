@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/interview-react/static/css/main.a9414bb5.css",
-    "main.js": "/interview-react/static/js/main.9c169c9a.js",
+    "main.css": "/interview-react/static/css/main.39f9f5ec.css",
+    "main.js": "/interview-react/static/js/main.fb019f35.js",
     "static/media/Gilroy-Medium.woff": "/interview-react/static/media/Gilroy-Medium.2bc7f5d7ea77ee1bddb3.woff",
     "static/media/Gilroy-Bold.woff": "/interview-react/static/media/Gilroy-Bold.5fb38b9fa452b5814397.woff",
     "static/media/Gilroy-Black.woff": "/interview-react/static/media/Gilroy-Black.1f5dc7482c1aec4cc827.woff",
@@ -12,15 +12,14 @@
     "static/media/Gilroy-Thin.woff": "/interview-react/static/media/Gilroy-Thin.6e2e7d472d0beb6b3cef.woff",
     "static/media/Gilroy-ExtraBold.woff": "/interview-react/static/media/Gilroy-ExtraBold.cb761043a2e505ff53c1.woff",
     "static/media/Gilroy-Regular.woff": "/interview-react/static/media/Gilroy-Regular.31d54a4b841c0e438f13.woff",
-    "static/media/delete.svg": "/interview-react/static/media/delete.42f47ba8847d48ecfa6db562ca42b94a.svg",
     "index.html": "/interview-react/index.html",
     "static/media/arrowwhite.svg": "/interview-react/static/media/arrowwhite.09cd53802747c1a54741743f81c675e3.svg",
     "static/media/arrow.svg": "/interview-react/static/media/arrow.23a5345f2cb0fd7fa21326ba38855abe.svg",
-    "main.a9414bb5.css.map": "/interview-react/static/css/main.a9414bb5.css.map",
-    "main.9c169c9a.js.map": "/interview-react/static/js/main.9c169c9a.js.map"
+    "main.39f9f5ec.css.map": "/interview-react/static/css/main.39f9f5ec.css.map",
+    "main.fb019f35.js.map": "/interview-react/static/js/main.fb019f35.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9414bb5.css",
-    "static/js/main.9c169c9a.js"
+    "static/css/main.39f9f5ec.css",
+    "static/js/main.fb019f35.js"
   ]
 }

@@ -1,24 +1,5 @@
-@media screen and (min-height: 844px) {
-    .home {
-        min-height: 500px;
-        height: 93.6vh;
-    }
-}
-
-@media screen and (min-height: 650px) {
-    .home {
-        max-height: 100vh;
-    }
-}
-
 .home {
     margin: 20px auto;
     width: 314px;
     overflow: scroll;
-}
-
-.h2 {
-    font-family: 'Gilroy-SemiBold';
-    font-size: 20px;
-    margin-bottom: 15px;
 }

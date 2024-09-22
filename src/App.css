@@ -9,8 +9,20 @@
 .app {
   padding-top: 1px;
   margin: 0 auto;
-  min-width: 375px;
   width: 100vw;
   height: 100vh;
   background-color: #F4F7FE;
+}
+
+.h2 {
+  font-family: 'Gilroy-SemiBold';
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-family: 'Gilroy-Regular';
+  color: rgb(143, 155, 186);
+  margin-top: -15px;
+  margin-bottom: 15px;
 }

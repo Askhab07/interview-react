@@ -51,7 +51,7 @@ const CategoriesList = ({setPages, setActiveId, selectedCategory}) => {
   return (
     <div className="categories-list">
       <h2 className="h2">Preparing for an interview</h2>
-      <p>Количество вопросов {filterQuiz.length}</p>
+      <p className='p'>Количество вопросов {filterQuiz.length}</p>
       <div className="categories-list-list">
         {filterQuiz.map(q => <CategoryItem key={q.id} onClick={() => setActiveId(q.id)} id={q.id} text={q.question} setQuizData={setQuizData} />)}
       </div>

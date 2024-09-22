@@ -1,33 +1,20 @@
-@media screen and (max-height: 844px) {
+@media screen and (min-height: 844px) {
     .home {
-        display: flex;
-        flex-direction: column;
         min-height: 500px;
         height: 93.6vh;
-        overflow: scroll;
-    }
-
-    .btn-postion {
-        position: absolute;
-        bottom: 0;
     }
 }
 
-@media screen and (max-height: 667px) {
+@media screen and (min-height: 650px) {
     .home {
         max-height: 100vh;
-    }
-
-    .btn-postion {
-        position: absolute;
-        bottom: 8px;
     }
 }
 
 .home {
-    position: relative;
     margin: 20px auto;
     width: 314px;
+    overflow: scroll;
 }
 
 .h2 {

@@ -54,7 +54,7 @@ const Home = ({setPages, activeId, setActiveId}) => {
             <div className='quiz-list'>
             {activeQuiz && <Quiz category={activeQuiz.category} title={activeQuiz.question} text={activeQuiz.answer} />}
             </div>
-            <Button className='btn-postion' onClick={handleClick} text='Back to go' />
+            <Button onClick={handleClick} text='Back to go' />
         </main>
     );
 };

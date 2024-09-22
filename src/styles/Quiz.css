@@ -1,22 +1,39 @@
-@media screen and (max-height: 844px) {
+/* @media screen and (max-height: 844px) {
   .quiz {
-    margin-top: 90px;
-    height: 68vh;
+    height: 58vh;
+  }
+} */
+
+@media screen and (min-height: 844px) {
+  .quiz {
+    margin-top: 110px;
+    min-height: 550px;
   }
 
   .quiz-text {
-    height: 470px;
+    min-height: 450px;
   }
 }
 
-@media screen and (max-height: 667px) {
+@media screen and (min-height: 750px) and (max-height: 844px) {
+  .quiz {
+    margin-top: 90px;
+    min-height: 490px;
+  }
+  
+  .quiz-text {
+    min-height: 380px;
+  }
+}
+
+@media screen and (min-height: 650px) and (max-height: 750px) {
   .quiz {
     margin-top: 70px;
-    height: 50vh;
+    height: 61vh;
   }
 
   .quiz-text {
-    height: 290px;
+    min-height: 42vh;
   }
 }
 
@@ -26,9 +43,9 @@
     justify-content: center;
     position: relative;
     width: 314px;
-    min-height: 420px;
     background-color: #fff;
     border-radius: 26px;
+    margin-bottom: 20px;
   }
 
   .quiz-title {

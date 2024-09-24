@@ -27,8 +27,8 @@
 }
 
 .create-quiz input,
-textarea,
-select {
+.create-quiz textarea,
+.create-quiz select {
   width: 260px;
   height: 60px;
   font-size: 18px;

@@ -60,9 +60,10 @@ const Categories = ({ setPages, setSelectedCategory }) => {
     setPages(4)
   };
 
-  const handleClick = () => {
-    setPages(3);
+  const clickTests = () => {
+    setPages(5);
   };
+
 
   return (
     <div className="categories">
@@ -70,7 +71,8 @@ const Categories = ({ setPages, setSelectedCategory }) => {
       <div className="category-list">
         {isLoading ? <div className='loading'>Загрузка идет братан подожди немного...</div> : (uniqueCategories.map((q, i) => <Category key={i} onClick={() => handleQuizList(q)} text={q} />))}
       </div>
-      <Button onClick={handleClick} text="Create quiz" />
+      {/* <Button onClick={clickCreate} text="Create quiz" /> */}
+      <Button onClick={clickTests} text="Quiz test" />
     </div>
   );
 };

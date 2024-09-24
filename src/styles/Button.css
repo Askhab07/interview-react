@@ -39,3 +39,7 @@ button {
 .strong-active {
     font-weight: 600;
 }
+
+.test-btn {
+    width: 150px;
+}

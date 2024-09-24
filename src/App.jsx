@@ -4,6 +4,7 @@ import Home from './UI/Home';
 import Categories from './UI/Categories';
 import CategoriesList from './UI/CategoriesList';
 import Create from './UI/Create';
+import Tests from './components/Tests/Tests';
 
 function App() {
   const [pages, setPages] = useState(1);
@@ -16,6 +17,7 @@ function App() {
       {activeId === null && pages === 4 && <CategoriesList selectedCategory={selectedCategory} setActiveId={setActiveId} setPages={setPages} />}
       {pages === 3 && <Create setPages={setPages} />}
       {activeId !== null && <Home activeId={activeId} setActiveId={setActiveId} setPages={setPages}/>}
+      {pages === 5 && <Tests setPages={setPages} />}
     </div>
   );
 }

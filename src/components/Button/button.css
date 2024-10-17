@@ -1,5 +1,7 @@
 button {
-    width: 314px;
+    position: fixed;
+    bottom: 30px;
+    width: 294px;
     height: 60px;
     background-color: rgb(91, 83, 255);
     font-family: 'Gilroy-Bold';

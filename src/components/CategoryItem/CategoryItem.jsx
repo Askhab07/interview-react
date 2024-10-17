@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/CategoryItem.css';
+import './categoryItem.css';
 // import deleteIcon from '../../assets/delete.svg';
 // import axios from 'axios';
 

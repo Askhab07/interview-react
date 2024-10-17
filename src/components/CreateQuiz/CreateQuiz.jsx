@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/CreateQuiz.css';
+import './createQuiz.css';
 
 const CreateQuiz = ({
   category,

@@ -1,0 +1,174 @@
+/* .tests {
+  margin: 20px auto 0;
+  width: 314px;
+  height: 100%;
+}
+
+.test-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #fff;
+  font-family: 'Gilroy-Bold';
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.choose {
+    margin-top: 20px;
+    width: 260px;
+}
+
+.tests select,
+.tests .test-quest,
+.tests textarea {
+  width: 260px;
+  min-height: 60px;
+  font-size: 18px;
+  font-family: 'Gilroy-Bold';
+  padding: 20px;
+  background-color: #f4f7fe;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.tests select {
+    margin-top: 10px;
+}
+
+.test-quest {
+    height: 100px;
+    overflow-x: scroll;
+}
+
+.tests textarea {
+    height: 200px;
+    resize: none;
+}
+
+.tests-btn {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tests .result {
+  text-align: center;
+  width: 260px;
+  height: 60px;
+  overflow-x: scroll;
+} */
+
+/* Основной контейнер тестов */
+.tests {
+  margin: 20px auto 0;
+  width: 100%; /* Сделано гибким для адаптивности */
+  max-width: 314px; /* Ограничение максимальной ширины */
+  height: 100%;
+}
+
+/* Формы тестов */
+.test-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #fff;
+  font-family: 'Gilroy-Bold';
+  margin-bottom: 15px;
+  padding: 20px; /* Добавлен padding для комфортного отображения */
+  box-sizing: border-box; /* Учитываем отступы в ширину */
+}
+
+/* Выбор элементов */
+.choose {
+    margin-top: 20px;
+    width: 100%; /* Адаптивная ширина */
+    max-width: 260px;
+}
+
+/* Элементы выбора и ввода текста */
+.tests select,
+.tests .test-quest,
+.tests textarea {
+  width: 100%; /* Гибкая ширина */
+  max-width: 260px;
+  min-height: 60px;
+  font-size: 18px;
+  font-family: 'Gilroy-Bold';
+  padding: 20px;
+  background-color: #f4f7fe;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Дополнительные стили для select */
+.tests select {
+  margin-top: 10px;
+}
+
+/* Вопросы теста */
+.test-quest {
+  height: 100px;
+  overflow-x: scroll;
+}
+
+/* Текстовое поле */
+.tests textarea {
+  height: 200px;
+  resize: none;
+}
+
+/* Кнопки */
+.tests-btn {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 260px;
+}
+
+/* Результаты */
+.tests .result {
+  text-align: center;
+  width: 100%;
+  max-width: 260px;
+  height: 60px;
+  overflow-x: scroll;
+}
+
+/* Адаптивность для экранов до 768px */
+@media (max-width: 768px) {
+  .test-forms {
+    padding: 15px; /* Уменьшены отступы */
+  }
+
+  .tests textarea {
+    height: 180px; /* Уменьшена высота для мобильных */
+  }
+
+  .test-quest {
+    height: 90px;
+  }
+}
+
+/* Адаптивность для экранов до 480px */
+@media (max-width: 480px) {
+  .test-forms {
+    padding: 10px; /* Минимальные отступы */
+  }
+
+  .tests textarea {
+    height: 150px; /* Еще меньшая высота */
+  }
+
+  .test-quest {
+    height: 80px;
+  }
+}

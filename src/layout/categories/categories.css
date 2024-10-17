@@ -1,0 +1,77 @@
+.categories {
+    position: relative;
+    margin: 20px auto 0;
+    width: 90%;
+    max-width: 314px;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Текст загрузки */
+.loading {
+    font-size: 20px;
+    color: #5d56fe;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Список категорий */
+.category-list {
+    min-height: 500px;
+    max-height: 100vh; /* Использование vh для отзывчивости */
+    overflow-x: auto;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+}
+
+/* Адаптивность для устройств с шириной до 768px (планшеты) */
+@media (max-width: 768px) {
+    .categories {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .loading {
+        font-size: 18px;
+    }
+
+    .category-list {
+        min-height: 600px; /* Подстраиваем высоту */
+        max-height: 50vh; /* Уменьшаем максимальную высоту для планшетов */
+    }
+}
+
+/* Адаптивность для устройств с шириной до 480px (мобильные устройства) */
+@media (max-width: 480px) {
+    .categories {
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    .loading {
+        font-size: 16px;
+    }
+
+    .category-list {
+        min-height: 500px;
+        max-height: 40vh;
+    }
+}
+
+/* Дополнительная адаптивность для iPhone 12/13/14 и аналогичных Android-устройств с более высоким разрешением */
+@media (max-width: 390px) {
+    .categories {
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    .loading {
+        font-size: 14px;
+    }
+
+    .category-list {
+        min-height: 300px;
+        max-height: 65vh;
+    }
+}

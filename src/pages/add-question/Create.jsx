@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import CreateQuiz from '../components/CreateQuiz/CreateQuiz';
-import Button from '../components/Button/Button';
-import '../styles/Create.css';
-import arrow from '../assets/arrowwhite.svg';
+import CreateQuiz from '@/components/createQuiz/CreateQuiz';
+import Button from '@/components/button/Button';
+import './create.css';
+import arrow from '@/assets/arrowwhite.svg';
 // import axios from 'axios';
 
 const Create = ({ setPages }) => {

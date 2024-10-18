@@ -19,26 +19,29 @@ const QuizForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbx2gHOHMA7LHMC7d4bi0ukpT3Tb6SlAyCik2JqS0voKRIVRiAEhJBiCaKeSSRk0CSah/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyjLY68LbMZL2TsH7lFEgZg6YIRLYGKUR_OKMmgmVxroUKmNirH9mgWc2O9AL3j0kfs/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
       });
+      
+
       if (!response.ok) {
-        // Handle HTTP errors
-        const errorMessage = await response.text(); // Get error message from response
+        const errorMessage = await response.text();
         throw new Error(`HTTP error! status: ${response.status}, message: ${errorMessage}`);
       }
+
       const result = await response.json();
+
       if (result.status === 'success') {
         alert('Data submitted successfully!');
       } else {
         alert('Failed to submit data.');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error:', error); // Логирование ошибки
       alert('An error occurred while submitting the data.');
     }
   };

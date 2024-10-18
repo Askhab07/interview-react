@@ -10,6 +10,7 @@ const Questions = () => {
 
   // Фильтруем вопросы по категории
   const filteredQuestions = categories.filter((q) => q.category === category);
+  
 
   // Состояние для хранения перечеркнутых вопросов
   const [crossedQuestions, setCrossedQuestions] = usePersistedState('crossedQuestions', []);
@@ -23,7 +24,6 @@ const Questions = () => {
   // Разделяем вопросы на перечеркнутые и неперечеркнутые
   const uncrossedQuestions = filteredQuestions.filter(q => !crossedQuestions.includes(q.id));
   const crossedQuestionsList = filteredQuestions.filter(q => crossedQuestions.includes(q.id));
-  console.log(uncrossedQuestions);
   
 
   return (
@@ -35,8 +35,9 @@ const Questions = () => {
       <div className="flex flex-col gap-4 mt-5">
         {/* Отображаем неперечеркнутые вопросы */}
         {uncrossedQuestions.length > 0 ? (
-          uncrossedQuestions.map((question) => (
-            <div key={question.id} className="flex justify-between items-center px-7 h-16 bg-violet-100 rounded-full">
+          uncrossedQuestions.map((question, index) => (
+            <div key={question.id} className="flex justify-between items-center px-5 h-16 bg-violet-100 rounded-full">
+              <span className='text-xl text-red-400 font-medium'>{index + 1}</span>
               <Link to={`/interview-react/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-violet-500">
                 {`${question.question.slice(0, 40)}...`}
               </Link>

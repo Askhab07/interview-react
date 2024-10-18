@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
 const Question = () => {
@@ -28,7 +28,7 @@ const Question = () => {
       )}
       <div className='flex justify-between mb-20'>
       <button className='w-36 h-24 font-semibold text-xl rounded-2xl text-violet-500 bg-violet-50' onClick={handleClick}>Назад</button>
-      <button className='w-36 h-24 font-semibold text-xl rounded-2xl text-violet-500 bg-violet-50'>Посмотреть<br/>код</button>
+      <button className='w-36 h-24 font-semibold text-xl rounded-2xl text-violet-500 bg-violet-50'><Link to={`/interview-react/question/${id}/code`}>Посмотреть<br/>код</Link></button>
       </div>
     </div>
   );

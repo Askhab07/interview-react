@@ -11,7 +11,7 @@ function AppProvider({ children }) {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwG6_UBsY-eojtHXni_35EmRgPy_cNlBfewEMEbOuTCM9XVTft5l9p_2mbRCuxA9QBm/exec');
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyjLY68LbMZL2TsH7lFEgZg6YIRLYGKUR_OKMmgmVxroUKmNirH9mgWc2O9AL3j0kfs/exec');
       const data = await response.json();
 
       // Получаем данные из localStorage для сравнения

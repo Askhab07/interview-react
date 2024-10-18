@@ -27,8 +27,8 @@ const Question = () => {
         <p>Вопрос не найден.</p>
       )}
       <div className='flex justify-between mb-20'>
-      <button className='w-40 h-24 font-semibold text-xl rounded-2xl text-violet-500 bg-violet-100' onClick={handleClick}>Назад</button>
-      <button className='w-40 h-24 font-semibold text-xl rounded-2xl text-violet-500 bg-violet-100'>Посмотреть<br/>код</button>
+      <button className='w-36 h-24 font-semibold text-xl rounded-2xl text-violet-500 bg-violet-50' onClick={handleClick}>Назад</button>
+      <button className='w-36 h-24 font-semibold text-xl rounded-2xl text-violet-500 bg-violet-50'>Посмотреть<br/>код</button>
       </div>
     </div>
   );

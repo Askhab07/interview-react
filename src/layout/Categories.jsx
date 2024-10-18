@@ -12,7 +12,7 @@ const Categories = () => {
     <div className="w-full">
       <div className="flex flex-col gap-4 h-full mb-24">
         {uniqueCategories.map((c) => (
-          <Link key={c} to={`/${c}`}>
+          <Link key={c} to={`/interview-react/${c}`}>
             <Category text={c} />
           </Link>
         ))}

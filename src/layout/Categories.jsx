@@ -11,11 +11,11 @@ const Categories = () => {
   return (
     <div className="w-full">
       <div className="flex flex-col gap-4 h-full mb-24">
-          <Link to='/interview-react/top'>
+          <Link to='/top'>
           <Category text="Топ вопросы" top={'uppercase animate-pulse'} />
         </Link>
         {uniqueCategories.map((c) => (
-          <Link key={c} to={`/interview-react/${c}`}>
+          <Link key={c} to={`/${c}`}>
             <Category text={c} />
           </Link>
         ))}

@@ -38,7 +38,7 @@ const Questions = () => {
           uncrossedQuestions.map((question, index) => (
             <div key={question.id} className="flex justify-between items-center px-5 h-16 bg-violet-100 rounded-full">
               <span className='text-xl text-red-400 font-medium'>{index + 1}</span>
-              <Link to={`/interview-react/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-violet-500">
+              <Link to={`/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-violet-500">
                 {`${question.question.slice(0, 40)}...`}
               </Link>
               <ArchiveBoxIcon 
@@ -58,7 +58,7 @@ const Questions = () => {
             <span className='text-gray-400'>Количество вопросов которые ты знаешь {crossedQuestionsList.length}</span>
             {crossedQuestionsList.map((question) => (
               <div key={question.id} className="flex justify-between items-center px-7 h-16 bg-violet-100 rounded-full opacity-50 line-through">
-                <Link to={`/interview-react/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-violet-500">
+                <Link to={`/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-violet-500">
                   {`${question.question.slice(0, 40)}...`}
                 </Link>
                 <ArchiveBoxIcon 

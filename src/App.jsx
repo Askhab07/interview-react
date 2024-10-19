@@ -20,15 +20,15 @@ function App() {
     <AppProvider>
       <Router>
         <Routes>
-          <Route path="/interview-react/auth" element={<Auth />} />
-          <Route path="/interview-react/" element={<Home />} />
-          <Route path="/interview-react/:category" element={<Questions />} />
-          <Route path="/interview-react/question/:id" element={<Question />} />
-          <Route path="/interview-react/question/:id/detailed" element={<Detailed />} />
-          <Route path="/interview-react/question/:id/code" element={<Code />} />
-          <Route path="/interview-react/top" element={<TopQuestions />} />
-          <Route path="/interview-react/add" element={<AddQuestion />} />
-          <Route path="/interview-react/profile" element={<Profile />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/:category" element={<Questions />} />
+          <Route path="/question/:id" element={<Question />} />
+          <Route path="/question/:id/detailed" element={<Detailed />} />
+          <Route path="/question/:id/code" element={<Code />} />
+          <Route path="/top" element={<TopQuestions />} />
+          <Route path="/add" element={<AddQuestion />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       {admin ? <Navbar /> : null}
       </Router>

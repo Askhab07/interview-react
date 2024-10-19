@@ -1,18 +1,14 @@
 import React, { useContext } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import { ArchiveBoxIcon } from '@heroicons/react/16/solid';
 import usePersistedState from '../hooks/usePersistedState';
 
-const Questions = () => {
-  const { category } = useParams(); // Получаем категорию из URL
+const TopQuestions = () => {
   const { data } = useContext(AppContext);
 
-  // Фильтруем вопросы по категории
-  const filteredQuestions = data.quiz.filter((q) => q.category === category);
+  const topQuestions = data.quiz.filter(question => question.top === true);
   
-
-  // Состояние для хранения перечеркнутых вопросов
   const [crossedQuestions, setCrossedQuestions] = usePersistedState('crossedQuestions', []);
 
   const handleClick = (id) => {
@@ -21,15 +17,13 @@ const Questions = () => {
     );
   };
 
-  // Разделяем вопросы на перечеркнутые и неперечеркнутые
-  const uncrossedQuestions = filteredQuestions.filter(q => !crossedQuestions.includes(q.id));
-  const crossedQuestionsList = filteredQuestions.filter(q => crossedQuestions.includes(q.id));
-  
+  const uncrossedQuestions = topQuestions.filter(q => !crossedQuestions.includes(q.id));
+  const crossedQuestionsList = topQuestions.filter(q => crossedQuestions.includes(q.id));
 
   return (
     <div className="w-full p-5 mb-20">
       <h1 className="text-xl font-bold mb-3">
-        Вопросы из категории: {category}
+        Топ вопросы
       </h1>
       <span className='text-gray-400'>Количество вопросов для изучение: {uncrossedQuestions.length}</span>
       <div className="flex flex-col gap-4 mt-5">
@@ -74,4 +68,4 @@ const Questions = () => {
   );
 };
 
-export default Questions;
+export default TopQuestions;

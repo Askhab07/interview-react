@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Chat = () => {
+const Interview = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default Interview;

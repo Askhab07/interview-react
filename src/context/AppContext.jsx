@@ -3,25 +3,21 @@ import React, { createContext, useState, useEffect } from 'react';
 const AppContext = createContext();
 
 function AppProvider({ children }) {
-  const [categories, setCategories] = useState(() => {
-    // Проверяем наличие данных в локальном хранилище при инициализации состояния
+  const [data, setData] = useState(() => {
     const savedData = localStorage.getItem('questions');
-    return savedData ? JSON.parse(savedData) : [];
+    return savedData ? JSON.parse(savedData) : { quiz: [], inter: [], admin: [] };
   });
 
   const fetchData = async () => {
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbyjLY68LbMZL2TsH7lFEgZg6YIRLYGKUR_OKMmgmVxroUKmNirH9mgWc2O9AL3j0kfs/exec');
-      const data = await response.json();
-
-      // Получаем данные из localStorage для сравнения
+      const newData = await response.json();
+      
       const storedData = localStorage.getItem('questions');
       
-      // Сравниваем данные с сервера с сохранёнными данными
-      if (JSON.stringify(data) !== storedData) {
-        // Если данные изменились, обновляем localStorage и состояние
-        localStorage.setItem('questions', JSON.stringify(data));
-        setCategories(data);
+      if (JSON.stringify(newData) !== storedData) {
+        localStorage.setItem('questions', JSON.stringify(newData));
+        setData(newData);
       }
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -29,17 +25,15 @@ function AppProvider({ children }) {
   };
 
   useEffect(() => {
-    // Если данных нет в localStorage, загружаем их с сервера
-    if (categories.length === 0) {
+    if (data.quiz.length === 0 && data.inter.length === 0 && data.admin.length === 0) {
       fetchData();
     } else {
-      // Если данные есть, проверяем их актуальность
       fetchData();
     }
-  }, [categories]);
+  }, [data]);
 
   return (
-    <AppContext.Provider value={{ categories, setCategories }}>
+    <AppContext.Provider value={{ data, setData }}>
       {children}
     </AppContext.Provider>
   );

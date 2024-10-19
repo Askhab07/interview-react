@@ -10,10 +10,10 @@ import 'highlight.js/lib/languages/xml'; // Для HTML и JSX
 const Code = () => {
   const codeRef = useRef(null);
   const { id } = useParams(); // Получаем параметр id из URL
-  const { categories } = useContext(AppContext); // Достаем категории из контекста
+  const { data } = useContext(AppContext); // Достаем категории из контекста
   const navigate = useNavigate();
 
-  const filteredQuestion = categories.find((q) => q.id === parseInt(id));
+  const filteredQuestion = data.quiz.find((q) => q.id === parseInt(id));
 
   const handleClick = () => {
     navigate(-1);
@@ -27,9 +27,9 @@ const Code = () => {
   const language = filteredQuestion ? filteredQuestion.category : 'plaintext'; // Предполагается, что `filteredQuestion` содержит язык
 
   return (
-    <div className="h-screen p-5">
-      <pre className="border-2 border-violet-100 rounded-lg text h-4/6 overflow-scroll">
-        <code ref={codeRef} className={`h-full language-${language}`}>
+    <div className="p-5">
+      <pre className="w-full border-2 break-words border-violet-100 rounded-xl mb-36">
+        <code ref={codeRef} className={`w-full border-violet-100 rounded-xl text-xs whitespace-pre-wrap language-${language}`}>
           {filteredQuestion ? filteredQuestion.code : 'Код не найден для данного вопроса.'}
         </code>
       </pre>

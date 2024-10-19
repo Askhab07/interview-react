@@ -4,10 +4,10 @@ import { AppContext } from '../context/AppContext';
 
 const Question = () => {
   const { id } = useParams();
-  const {categories} = useContext(AppContext);
+  const {data} = useContext(AppContext);
   const navigate = useNavigate();
 
-  const filteredQuestion = categories.find((q) => q.id === parseInt(id));
+  const filteredQuestion = data.quiz.find((q) => q.id === parseInt(id));
 
   const handleClick = () => {
     navigate(-1)
@@ -21,7 +21,7 @@ const Question = () => {
             <h3 className='text-2xl font-semibold mb-3'>{filteredQuestion.category}</h3>
             <h4 className='text-l font-medium'>{filteredQuestion.question}</h4>
           </div>
-          <div className="min-h-full h-5/6 mb-5">{filteredQuestion.answer}</div>
+          <div className="min-h-full h-5/6 mb-5">{filteredQuestion.answer}<span className='text-violet-500 italic underline'><Link to={`/interview-react/question/${id}/detailed`}>Развернутый ответ.</Link></span></div>
         </div>
       ) : (
         <p>Вопрос не найден.</p>

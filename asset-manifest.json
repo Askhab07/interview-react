@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/interview-react/static/css/main.a7fc64b7.css",
-    "main.js": "/interview-react/static/js/main.c10c410e.js",
+    "main.css": "/interview-react/static/css/main.e5663666.css",
+    "main.js": "/interview-react/static/js/main.2b6b6388.js",
     "static/media/Gilroy-Medium.woff": "/interview-react/static/media/Gilroy-Medium.2bc7f5d7ea77ee1bddb3.woff",
     "static/media/Gilroy-Bold.woff": "/interview-react/static/media/Gilroy-Bold.5fb38b9fa452b5814397.woff",
     "static/media/Gilroy-Black.woff": "/interview-react/static/media/Gilroy-Black.1f5dc7482c1aec4cc827.woff",
@@ -13,11 +13,11 @@
     "static/media/Gilroy-ExtraBold.woff": "/interview-react/static/media/Gilroy-ExtraBold.cb761043a2e505ff53c1.woff",
     "static/media/Gilroy-Regular.woff": "/interview-react/static/media/Gilroy-Regular.31d54a4b841c0e438f13.woff",
     "index.html": "/interview-react/index.html",
-    "main.a7fc64b7.css.map": "/interview-react/static/css/main.a7fc64b7.css.map",
-    "main.c10c410e.js.map": "/interview-react/static/js/main.c10c410e.js.map"
+    "main.e5663666.css.map": "/interview-react/static/css/main.e5663666.css.map",
+    "main.2b6b6388.js.map": "/interview-react/static/js/main.2b6b6388.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7fc64b7.css",
-    "static/js/main.c10c410e.js"
+    "static/css/main.e5663666.css",
+    "static/js/main.2b6b6388.js"
   ]
 }

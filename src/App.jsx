@@ -26,6 +26,11 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.classList.add(savedTheme);
+  }, []);
+  
+  useEffect(() => {
     // Проверяем, авторизован ли пользователь при загрузке приложения
     if (admin === 0) {
       navigate('/auth'); // Если не авторизован, перенаправляем на страницу авторизации

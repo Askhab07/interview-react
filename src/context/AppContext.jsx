@@ -5,9 +5,9 @@ const AppContext = createContext();
 function AppProvider({ children }) {
   const [data, setData] = useState(() => {
     const savedData = localStorage.getItem('questions');
-    return savedData ? JSON.parse(savedData) : { quiz: [], inter: [], admin: [] };
+    return savedData ? JSON.parse(savedData) : { quiz: [], inter: [], admin: []};
   });
-
+  
   const fetchData = async () => {
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbyjLY68LbMZL2TsH7lFEgZg6YIRLYGKUR_OKMmgmVxroUKmNirH9mgWc2O9AL3j0kfs/exec');

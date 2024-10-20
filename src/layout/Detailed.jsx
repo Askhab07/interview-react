@@ -26,16 +26,16 @@ const Detailed = () => {
   const language = filteredQuestion ? filteredQuestion.category : 'plaintext'; // Предполагается, что `filteredQuestion` содержит язык
 
   return (
-    <div className="w-full">
-      <div className="break-words mb-36">
-        <pre className="w-full whitespace-pre-wrap">
-          <code className={`font-sans ${language}`} ref={codeRef}>
+    <div className="w-full p-5 dark:bg-slate-800">
+      <div className="break-words pb-36">
+        <pre className="w-full whitespace-pre-wrap dark:bg-slate-800">
+          <code className={`font-sans ${language} dark:bg-slate-800 dark:text-slate-400`} ref={codeRef}>
           {filteredQuestion.detailed}
           </code>
         </pre>
       </div>
       <button
-        className="fixed translate-x-3 m-5 bottom-4 w-5/6 h-12 mt-5 mb-20 font-semibold text-xl rounded-xl text-violet-500 bg-violet-50"
+        className="fixed translate-x-3 bottom-4 w-5/6 h-12 mt-5 mb-20 font-semibold text-xl rounded-xl text-violet-500 bg-violet-50 dark:bg-slate-600 dark:text-white"
         onClick={handleClick}
       >
         Назад

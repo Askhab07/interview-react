@@ -7,13 +7,13 @@ import 'highlight.js/lib/languages/javascript';
 import 'highlight.js/lib/languages/css';
 import 'highlight.js/lib/languages/xml'; // Для HTML и JSX
 
-const Code = () => {
+const InterCode = () => {
   const codeRef = useRef(null);
   const { id } = useParams(); // Получаем параметр id из URL
   const { data } = useContext(AppContext); // Достаем категории из контекста
   const navigate = useNavigate();
 
-  const filteredQuestion = data.quiz.find((q) => q.id === parseInt(id));
+  const filteredQuestion = data.inter.find((q) => q.id === parseInt(id));
 
   const handleClick = () => {
     navigate(-1);
@@ -43,4 +43,4 @@ const Code = () => {
   );
 };
 
-export default Code;
+export default InterCode;

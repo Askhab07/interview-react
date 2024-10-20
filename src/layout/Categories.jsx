@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Categories = () => {
   const { data } = useContext(AppContext);
-
   const uniqueCategories = [...new Set(data.quiz.map((c) => c.category))];
 
   return (

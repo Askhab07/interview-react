@@ -23,7 +23,7 @@ function SearchQuestions() {
   }, [query, data]);
 
   return (
-    <div className="dark:bg-slate-800 text-white ">
+    <div className="dark:bg-slate-800 dark:text-white ">
       <input
         type="text"
         placeholder="Поиск вопроса..."

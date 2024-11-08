@@ -5,8 +5,10 @@ const AppContext = createContext();
 function AppProvider({ children }) {
   const [data, setData] = useState(() => {
     const savedData = localStorage.getItem('questions');
-    return savedData ? JSON.parse(savedData) : { quiz: [], inter: [], admin: []};
+    return savedData ? JSON.parse(savedData) : { quiz: [], inter: [], admin: [], task: []};
   });
+  
+  console.log(data);
   
   const fetchData = async () => {
     try {
@@ -25,7 +27,7 @@ function AppProvider({ children }) {
   };
 
   useEffect(() => {
-    if (data.quiz.length === 0 && data.inter.length === 0 && data.admin.length === 0) {
+    if (data.quiz.length === 0 && data.inter.length === 0 && data.admin.length === 0 && data.task.length === 0) {
       fetchData();
     } else {
       fetchData();

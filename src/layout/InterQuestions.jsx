@@ -34,13 +34,13 @@ const InterQuestions = () => {
         {/* Отображаем неперечеркнутые вопросы */}
         {uncrossedQuestions.length > 0 ? (
           uncrossedQuestions.map((question, index) => (
-            <div key={question.id} className="flex justify-between items-center px-5 h-16 bg-violet-100 rounded-full dark:bg-slate-500">
+            <div key={question.id} className="flex justify-between items-center px-5 h-16 bg-blue-100 rounded-full dark:bg-slate-500">
               <span className='text-xl text-red-400 font-medium dark:text-white'>{index + 1}</span>
-              <Link to={`/inter/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-violet-500 dark:text-white">
+              <Link to={`/inter/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-blue-500 dark:text-white">
                 {`${question.question.slice(0, 40)}...`}
               </Link>
               <ArchiveBoxIcon
-                className="size-5 text-violet-500 cursor-pointer dark:text-white" 
+                className="size-5 text-blue-500 cursor-pointer dark:text-white" 
                 onClick={() => handleClick(question.id)} 
               />
             </div>
@@ -55,12 +55,12 @@ const InterQuestions = () => {
             <h2 className="text-lg font-bold">Изученные вопросы:</h2>
             <span className='text-gray-400'>Количество вопросов которые ты знаешь {crossedQuestionsList.length}</span>
             {crossedQuestionsList.map((question) => (
-              <div key={question.id} className="flex justify-between items-center px-7 h-16 bg-violet-100 rounded-full opacity-50 line-through dark:bg-slate-500">
-                <Link to={`/inter/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-violet-500 dark:text-white">
+              <div key={question.id} className="flex justify-between items-center px-7 h-16 bg-blue-100 rounded-full opacity-50 line-through dark:bg-slate-500">
+                <Link to={`/inter/question/${question.id}`} className="flex items-center w-64 h-12 text-l font-semibold text-blue-500 dark:text-white">
                   {`${question.question.slice(0, 40)}...`}
                 </Link>
                 <ArchiveBoxIcon 
-                  className="size-5 text-violet-500 cursor-pointer dark:text-white" 
+                  className="size-5 text-blue-500 cursor-pointer dark:text-white" 
                   onClick={() => handleClick(question.id)} 
                 />
               </div>

@@ -33,14 +33,14 @@ const Auth = ({ setAdmin }) => {
       {active && (
         <div className='w-full flex flex-col gap-5'>
           <input
-            className='bg-violet-100 h-16 rounded-full p-5 text-violet-500 text-xl outline-violet-500 dark:text-white dark:bg-slate-600 dark:outline-slate-500'
+            className='bg-blue-100 h-16 rounded-full p-5 text-blue-500 text-xl outline-blue-500 dark:text-white dark:bg-slate-600 dark:outline-slate-500'
             type="text"
             placeholder="Логин"
             value={login}
             onChange={(e) => setLogin(e.target.value)} // Обновляем стейт логина
           />
           <input
-            className='bg-violet-100 h-16 rounded-full p-5 text-violet-500 text-xl outline-violet-500 dark:text-white dark:bg-slate-600 dark:outline-slate-500'
+            className='bg-blue-100 h-16 rounded-full p-5 text-blue-500 text-xl outline-blue-500 dark:text-white dark:bg-slate-600 dark:outline-slate-500'
             type="password"
             placeholder="Пароль"
             value={password}
@@ -51,14 +51,14 @@ const Auth = ({ setAdmin }) => {
 
       {active ? (
         <button
-          className="w-full h-16 font-semibold text-xl rounded-full text-violet-500 bg-violet-50 dark:bg-slate-600 dark:text-white"
+          className="w-full h-16 font-semibold text-xl rounded-full text-blue-500 bg-blue-50 dark:bg-slate-600 dark:text-white"
           onClick={handleLogin} // Проверяем логин и пароль при нажатии
         >
           Войти
         </button>
       ) : (
         <button
-          className="w-full h-16 font-semibold text-xl rounded-full text-violet-500 bg-violet-50 dark:bg-slate-600 dark:text-white"
+          className="w-full h-16 font-semibold text-xl rounded-full text-blue-500 bg-blue-50 dark:bg-slate-600 dark:text-white"
           onClick={handleGuest} // Войти как гость
         >
           Войти как гость
@@ -68,14 +68,14 @@ const Auth = ({ setAdmin }) => {
 
       {!active ? (
         <button
-          className="fixed bottom-0 mb-5 text-violet-500 dark:text-white"
+          className="fixed bottom-0 mb-5 text-blue-500 dark:text-white"
           onClick={() => setActive(true)} // Показать форму для админа
         >
           Войти как админ
         </button>
       ):
       (<button
-        className="fixed bottom-0 mb-5 text-violet-500 dark:text-white"
+        className="fixed bottom-0 mb-5 text-blue-500 dark:text-white"
         onClick={() => setActive(false)} // Показать форму для админа
       >
         Войти как гость

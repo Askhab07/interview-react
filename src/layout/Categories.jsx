@@ -8,14 +8,14 @@ const Categories = () => {
   const uniqueCategories = [...new Set(data.quiz.map((c) => c.category))];
 
   return (
-    <div className="w-full">
+    <div className="w-full mb-8">
       <div className="flex flex-col gap-4 h-full mb-24">
           <Link to='/top'>
           <Category text="Топ вопросы" top={'uppercase animate-pulse'} />
         </Link>
         {uniqueCategories.map((c) => (
           <Link key={c} to={`/${c}`}>
-            <Category text={c} />
+            {c.length > 0 && <Category text={c} />}
           </Link>
         ))}
       </div>

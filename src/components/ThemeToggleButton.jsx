@@ -14,7 +14,7 @@ const ThemeToggleButton = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="w-80 h-12 rounded-xl mb-5 bg-violet-100 text-violet-500 dark:bg-slate-600 dark:text-white">
+    <button onClick={toggleTheme} className="w-80 h-12 rounded-xl mb-5 bg-blue-100 text-blue-500 dark:bg-slate-600 dark:text-white">
       Переключить тему
     </button>
   );

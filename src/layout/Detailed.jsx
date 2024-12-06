@@ -35,7 +35,7 @@ const Detailed = () => {
         </pre>
       </div>
       <button
-        className="fixed translate-x-3 bottom-4 w-5/6 h-12 mt-5 mb-20 font-semibold text-xl rounded-xl text-violet-500 bg-violet-50 dark:bg-slate-600 dark:text-white"
+        className="fixed translate-x-3 bottom-4 w-5/6 h-12 mt-5 mb-20 font-semibold text-xl rounded-xl text-blue-500 bg-blue-50 dark:bg-slate-600 dark:text-white"
         onClick={handleClick}
       >
         Назад

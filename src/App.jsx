@@ -16,6 +16,7 @@ import InterQuestions from './layout/InterQuestions';
 import InterQuestion from './components/InterQuestion';
 import InterCode from './layout/InterCode';
 import { ArrowLeftStartOnRectangleIcon } from '@heroicons/react/24/solid';
+import TopCategory from './layout/TopCategory';
 
 function App() {
   const [admin, setAdmin] = useState(() => {
@@ -51,7 +52,8 @@ function App() {
           <Route path="/question/:id" element={<Question />} />
           <Route path="/question/:id/detailed" element={<Detailed />} />
           <Route path="/question/:id/code" element={<Code />} />
-          <Route path="/top" element={<TopQuestions />} />
+          <Route path="/top" element={<TopCategory />} />
+          <Route path="/top/:category" element={<TopQuestions />} />
           <Route path="/education" element={<Education />} />
           <Route path="/inter" element={<Interview />} />
           <Route path="/inter/:company" element={<InterQuestions />} />
@@ -64,7 +66,7 @@ function App() {
         )}
         {admin === 2 && (
           <div className='p-5 fixed bottom-0 w-full h-20 bg-white flex items-center justify-between dark:bg-slate-800 border-t-2'>
-            <Link className='flex flex-col items-center dark:text-white' to="/auth" onClick={() => setAdmin(0)}><ArrowLeftStartOnRectangleIcon className='size-6 text-violet-500 dark:text-white'/>Выйти</Link>
+            <Link className='flex flex-col items-center dark:text-white' to="/auth" onClick={() => setAdmin(0)}><ArrowLeftStartOnRectangleIcon className='size-6 text-blue-500 dark:text-white'/>Выйти</Link>
           </div>
         )}
       </>

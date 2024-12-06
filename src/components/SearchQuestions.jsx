@@ -29,20 +29,20 @@ function SearchQuestions() {
         placeholder="Поиск вопроса..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="dark:text-white dark:bg-slate-800 dark:outline-white w-full h-10 mb-5 border-2 border-violet-100 outline-violet-500 rounded-full px-5 text-xl"
+        className="dark:text-white dark:bg-slate-800 dark:outline-white w-full h-10 mb-5 border-2 border-blue-100 outline-blue-500 rounded-full px-5 text-xl"
       />
 
       <ul className="flex flex-col gap-5">
         {filteredQuestions.length > 0
           ? filteredQuestions.map((question) => (
-              <li className="dark:text-white dark:bg-slate-500 h-16 px-5 last:mb-5 flex items-center border-2 rounded-full text-violet-500">
+              <li className="dark:text-white dark:bg-slate-500 h-16 px-5 last:mb-5 flex items-center border-2 rounded-full text-blue-500">
                 <Link
                   key={question.id}
                   to={`/question/${question.id}`}
                   className="flex gap-2 items-center"
                 >
                   <div>
-                    <MagnifyingGlassCircleIcon className="size-8 dark:text-white text-violet-500" />
+                    <MagnifyingGlassCircleIcon className="size-8 dark:text-white text-blue-500" />
                   </div>
                   {question.question.slice(0, 50)}
                 </Link>
